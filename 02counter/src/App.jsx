@@ -11,16 +11,20 @@ function App() {
 
   const addValue = () => {
 
-    if(counter == 20){
+    if(counter >= 20){
       alert("counter value should be less than 20")
     } else {
-      setCounter(counter + 1)
+      setCounter((prvCounter) => prvCounter + 1)
+      // setCounter(prvCounter => prvCounter + 1)
+      setCounter((prvCounter) => prvCounter + 1)
+      setCounter((prvCounter) => prvCounter + 1)
+      setCounter((prvCounter) => prvCounter + 1)
     }
   }
   
   const removeValue = () => {
     
-    if(counter == 0){
+    if(counter <= 0){
       alert("counter value should be greater than 0")
     } else {
       setCounter(counter - 1)
